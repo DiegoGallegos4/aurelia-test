@@ -1,0 +1,28 @@
+<template>
+  <require from="ui/nav-bar.html"></require>
+  <require from="ui/page.html"></require>
+  <require from="ui/sidebar.html"></require>
+  <require from="ui/pg-footer.html"></require>
+  <require from="ui/breadcrumbs.html"></require>
+  <require from="ui/breadcrumbs.html"></require>
+
+
+<!-- whole content wrapper -->
+  <div class='wrapper' style='padding: 0 !important'>
+  <!-- sidebar menu -->
+    <sidebar router.bind='router'></sidebar>
+    <!-- main page wrapper -->
+    <div id="page-wrapper" class="gray-bg">
+    	<!-- top navigation bar -->
+  		<nav-bar router.bind="router"></nav-bar>
+  		<!-- Breadcrumbs -->
+  		<breadcrumbs router.bind='router'></breadcrumbs>
+  		<!-- Page content -->
+  		<page router.bind="router">
+        <router-view></router-view>  
+      </page>
+  		<!-- page footer -->
+  		<pg-footer router.bind='router'></pg-footer>
+  	</div>
+  </div>
+</template>
