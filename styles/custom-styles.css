@@ -1,3 +1,14 @@
 .nh-logo{
 	border: 1px solid #fff;
 }
+
+.select2-close-mask{
+    z-index: 2099 !important;
+}
+.select2-dropdown{
+    z-index: 3051 !important;
+}
+
+.select2-popover{
+    z-index: 1060 !important;
+}

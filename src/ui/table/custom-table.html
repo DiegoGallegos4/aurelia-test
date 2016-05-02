@@ -1,0 +1,29 @@
+<template>
+	<div class="table-responsive">
+		<table class='table table-striped table-bordered'>
+			<thead>
+				<tr>
+					<th>#</th>
+					<th repeat.for='value of values'>${value}</th>
+				</tr>
+				<tr if.bind='search == "true"'>
+					<th></th>
+					<th repeat.for='value of values' >
+						<input class='form-control' type='text' />
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr repeat.for='d of data' data-key=''>
+					<td>${count = count + 1}</td>
+					<td data-col='' repeat.for='key of keys'>${d[key]}</td>
+					<td>
+						<a repeat.for='button of buttons'>
+							<span class='glyphicon ${button.icon}'></span>
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</template>

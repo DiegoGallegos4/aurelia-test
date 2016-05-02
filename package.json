@@ -44,6 +44,8 @@
     "aurelia-templating-router": "^1.0.0-beta.1.1.1",
     "bluebird": "^3.3.4",
     "bootstrap": "^3.3.6",
+    "bootstrap-datepicker": "^1.6.0",
+    "dropzone": "^4.3.0",
     "font-awesome": "^4.5.0",
     "isomorphic-fetch": "^2.2.1",
     "jquery": "^2.2.3",
@@ -53,6 +55,7 @@
     "pace": "0.0.4",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
+    "select2": "^4.0.2",
     "toastr": "^2.1.2"
   },
   "devDependencies": {
@@ -81,6 +84,7 @@
     "protractor": "^3.2.1",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.0",
+    "stylus-loader": "^2.0.0",
     "url-loader": "^0.5.7",
     "wallaby-webpack": "0.0.21",
     "webpack": "^1.12.14",

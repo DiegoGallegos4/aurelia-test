@@ -1,4 +1,4 @@
-import {DepartmentService} from './department-service';
+import {DepartmentService} from './departmento-service';
 import {inject} from 'aurelia-framework';
 
 @inject(DepartmentService)
@@ -6,11 +6,13 @@ export class Department{
 	departments = []
 
 	constructor(service) {
+	  this.model = new DepartmentModel();
 	  this.service = service;
 	  this.title = 'Departamentos';
 	}
-
+	
 	activate(){
+		var self = this;
 		this.service.get()
 		  .then(response =>{
 		  	if(response.status < 200 && response.status > 299){
@@ -25,9 +27,17 @@ export class Department{
 
 		  	return response.json()})
 		  .then( data => {
-		  	this.departments = data;
+		  	self.departments = data.result.models;
 		  	console.log(data);
 		  })
 		  .catch(err => console.error(err))
+	}
+
+}
+
+export class DepartmentModel{
+	constructor() {
+		this.nombre = '';
+		this.abbr = '';
 	}
 }

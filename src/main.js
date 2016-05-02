@@ -8,7 +8,11 @@ import '../styles/styles.css';
 bootstrap(function(aurelia) {
   aurelia.use
     .standardConfiguration()
-    .developmentLogging();
+    .developmentLogging()
+    .feature('ui/input')
+    .feature('ui/modal')
+    .feature('ui/table')
+    .feature('ui/panel');
 
   aurelia.start().then(() => aurelia.setRoot('app', document.body));
 });

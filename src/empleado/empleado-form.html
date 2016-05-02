@@ -1,0 +1,12 @@
+<template>
+    <require from='../ui/input/input-date'></require>
+
+	<form role="form" id='form-empleado' submit.trigger='submit()'>
+		<input-group data.bind="{name:'nombre', placeholder: 'Nombre', label: 'Nombre'}"></input-group>
+		<input-group data.bind="{name:'apellido', placeholder: 'Apellido', label: 'Apellido'}"></input-group>
+		<input-date data.bind="{name:'fecha_nacimiento', placeholder: 'Fecha de Nacimiento', label: 'Fecha de Nacimiento'}"></input-date>
+		<select2 name='departamento_id' selected.bind='defaultSelected' options.bind='selectOptions' change.delegate="changeCallback($event)"></select2>
+		<button type="submit" class='btn btn-default' >Guardar</button>
+	</div>
+	</form>
+</template>

@@ -19,7 +19,9 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new AureliaWebpackPlugin(),
+    new AureliaWebpackPlugin({
+      moduleId: 'aurelia-loader-context'
+    }),
     new ProvidePlugin({
       Promise: 'bluebird',
       $: 'jquery',
@@ -31,6 +33,7 @@ module.exports = {
     loaders: [
       { test: /\.js$/, loader: 'babel', exclude: /node_modules/, query: { presets: ['es2015-loose', 'stage-1'], plugins: ['transform-decorators-legacy'] } },
       { test: /\.css?$/, loader: 'style!css' },
+      { test: /\.styl?$/, loader: 'css-loader!stylus-loader?paths=node_modules/bootstrap-stylus/stylus/' },
       { test: /\.html$/, loader: 'html' },
       { test: /\.(png|gif|jpg|ico)$/, loader: 'url?limit=8192' },
       { test: /\.xml$/, loader: 'xml-loader'},

@@ -1,0 +1,25 @@
+<template>
+	<require from='./empleado-form'></require>
+    <require from='../ui/table/custom-table'></require>
+
+	<button type="button" data-toggle='modal' data-target='#form-modal'> Añadir</button>
+	
+	<modal>
+		<modal-header title='Editar Empleado'></modal-header>
+		<modal-body content='../../empleado/empleado-form'></modal-body>
+		<!-- <modal-footer buttons.bind="['Guardar']"></modal-footer> -->
+	</modal>
+
+    <div class="row">
+    	<div class="col-lg-12">
+    		<h2>${title}</h2>
+    	</div>
+    </div>	
+
+    <panel title='Title'>
+        <h2>Title</h2>
+        <p>Stuff in here</p>
+    </panel>
+
+    <custom-table header.bind="header" data.bind="data"><custom-table>
+</template>

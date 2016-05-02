@@ -14,7 +14,8 @@ export class App {
     config.title = 'NH';
     config.map([
       { route: ['', 'welcome'], name: 'welcome',      moduleId: './scripts/welcome',       nav: true, title: 'Welcome' },
-      { route: 'department'  , name: 'department',   moduleId: './department/department', nav: true, title: 'Departamentos' }
+      { route: 'departmento'  , name: 'departmento',   moduleId: './departmento/departmento', nav: true, title: 'Departamentos'},
+      { route: 'empleado'  , name: 'empleado',   moduleId: './empleado/empleado', nav: true, title: 'Empleados'}
     ]);
 
     this.router = router;
